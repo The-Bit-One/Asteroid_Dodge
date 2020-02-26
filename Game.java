@@ -1,30 +1,33 @@
 //Asteroid Dodge
+
+float x, y; 
+
 void setup() {
   background(0, 0, 0);
   size(1000, 900);
   noLoop();
-  print ("press the mouse to start the game use the arrow keys to move your ship");
 }
+
 void draw() {
   // controls game states
   float screenOne = 1;
-   // x for player
-    int x = 0 ;
-    // y for player
-    int y = 50;
+
   // controls shift from endgame to menu start
   float nextGamestate = 0;
 
   while (screenOne == 1) {
     fill(0, 255, 0);
-    circle(700, 450, 30);
-    circle(300, 450, 30);
+    ellipse(700, 450, 100, 100);
+    ellipse(300, 450, 100, 100);
+    textSize(25);
+    textSize(85);
+    text("Asteroid Dodge", 170, 200);
+    textSize(25);
     fill(0, 0, 0);
-    textSize(15);
-    text("asteroid dodge", 100, 450);
-    text("play", 300, 450);
-    text("credits", 700, 450);
-    if ((dist(mouseX, mouseY, 500, 450)<30) && (mousePressed == true));
+    text("play", 275, 455);
+    text("credits", 660, 450);
+    fill(0,0,0);
+    if ((dist(mouseX, mouseY, 500, 450)<30) && (mousePressed == true)); 
     {
       screenOne = 2;
     }
@@ -35,14 +38,26 @@ void draw() {
     }
   }
   if (screenOne == 0) {
-    text(" Game Design - Riley Herchert /n Start Screen GUI design - Riley Herchert /n Sprites /n Thank you to Atari's asteroids for inspiration", 500, 450 );
+    fill(0, 255, 0);
+    ellipse(50, 50, 70, 70);
+    fill(0,0,0);
+    text("back", 22,57);
+    if ((dist(mouseX, mouseY, 50, 50)<20) && (mousePressed == true));   
+    {
+      screenOne = 1;
+    }
+    fill(255,255,255);
+    text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration", 300, 600 );
   }
   if (screenOne == 2) {
- 
+    // x for player
+    x = 0 ;
+    // y for player
+    y = 50;
 
     // stops the player score counter from looping.
     float ScoreRedoPrevention = 0;
-    // circle radius is cr
+    // ellipse radius is cr
     int CR = 50;
     // game end, triggered when you hit a meteor
     float GameOver = 0;
@@ -74,7 +89,7 @@ void draw() {
     float GG = 600;
     float HH = 650;
     float II = 800;
-    float JJ = 80;
+    float JJ =  80;
     float KK = 400;
     float LL = 700;
 
@@ -199,24 +214,24 @@ void draw() {
     stroke (255, 0, 0);
     fill(255, 0, 0);
     // player
-    circle(x, y, 50);
+    ellipse(x, y, 50, 50);
     //color setup
     fill(150, 75, 0);
     stroke (0);
 
     //meteors
-    circle(A, AA, CR);
-    circle(B, BB, CR);
-    circle(C, CC, CR);
-    circle(D, DD, CR);
-    circle(E, EE, CR);
-    circle(F, FF, CR);
-    circle(G, GG, CR);
-    circle(H, HH, CR);
-    circle(I, II, CR);
-    circle(J, JJ, CR);
-    circle(K, KK, CR);
-    circle(L, LL, CR);
+    ellipse(A, AA, CR, CR);
+    ellipse(B, BB, CR, CR);
+    ellipse(C, CC, CR, CR);
+    ellipse(D, DD, CR, CR);
+    ellipse(E, EE, CR, CR);
+    ellipse(F, FF, CR, CR);
+    ellipse(G, GG, CR, CR);
+    ellipse(H, HH, CR, CR);
+    ellipse(I, II, CR, CR);
+    ellipse(J, JJ, CR, CR);
+    ellipse(K, KK, CR, CR);
+    ellipse(L, LL, CR, CR);
 
     // meteor crash detector finds distance between spaceship and meteor if less than ten game
     // over
@@ -282,7 +297,6 @@ void draw() {
     }
   }
 }
-
 //player movement using arrow keys
 
 void keyPressed() {
@@ -317,5 +331,4 @@ void mousePressed() {
 }
 void mouseReleased() {
   loop();
-}
 }

@@ -1,6 +1,6 @@
 # Asteroid_Dodge
 
-Asteroids is based of the 1979 game [Asteroids](https://en.m.wikipedia.org/wiki/Asteroids_(video_game))
+Asteroids is loosely based of the 1979 game [Asteroids](https://en.m.wikipedia.org/wiki/Asteroids_(video_game))
 
 # Website
 

@@ -1,5 +1,6 @@
 //Asteroid Dodge
 
+// setting up player x and y
 float x, y; 
 
 void setup() {
@@ -14,39 +15,43 @@ void draw() {
 
   // controls shift from endgame to menu start
   float nextGamestate = 0;
-
+  // start menu
   while (screenOne == 1) {
     fill(0, 255, 0);
+    // button to see credits
     ellipse(700, 450, 100, 100);
+    // button for starting gameplay
     ellipse(300, 450, 100, 100);
     textSize(25);
     textSize(85);
-    text("Asteroid Dodge", 170, 200);
+    text("Asteroid Dodge", 180, 200);
     textSize(25);
     fill(0, 0, 0);
     text("play", 275, 455);
-    text("credits", 660, 450);
-    fill(0,0,0);
+    text("credits", 660, 455);
+    fill(0, 0, 0);
+    //moving to start of gameplay
     if ((dist(mouseX, mouseY, 500, 450)<30) && (mousePressed == true)); 
     {
       screenOne = 2;
     }
-
+    // moving to credits scren
     if ((dist(mouseX, mouseY, 700, 450)<30) && (mousePressed == true));   
     {
       screenOne = 0;
     }
   }
+  // credits screen with back button
   if (screenOne == 0) {
     fill(0, 255, 0);
     ellipse(50, 50, 70, 70);
-    fill(0,0,0);
-    text("back", 22,57);
+    fill(0, 0, 0);
+    text("back", 22, 57);
     if ((dist(mouseX, mouseY, 50, 50)<20) && (mousePressed == true));   
     {
       screenOne = 1;
     }
-    fill(255,255,255);
+    fill(255, 255, 255);
     text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration", 300, 600 );
   }
   if (screenOne == 2) {

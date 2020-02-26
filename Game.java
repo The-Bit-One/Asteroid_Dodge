@@ -311,10 +311,11 @@ void keyPressed() {
   }
 }
 
-}
+
 void mousePressed() {
   loop();
 }
 void mouseReleased() {
   loop();
+}
 }

@@ -30,12 +30,12 @@ void draw() {
     text("play", 275, 455);
     text("credits", 660, 455);
     fill(0, 0, 0);
-    //moving to start of gameplay
+    //button for moving to gameplay start
     if ((dist(mouseX, mouseY, 500, 450)<30) && (mousePressed == true)); 
     {
       screenOne = 2;
     }
-    // moving to credits scren
+    // button for moving to credits screen
     if ((dist(mouseX, mouseY, 700, 450)<30) && (mousePressed == true));   
     {
       screenOne = 0;
@@ -54,6 +54,8 @@ void draw() {
     fill(255, 255, 255);
     text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration", 300, 600 );
   }
+  
+  //gameplay strt screen
   if (screenOne == 2) {
     // x for player
     x = 0 ;
@@ -99,13 +101,15 @@ void draw() {
     float LL = 700;
 
 
-    //score variable should go up by ten pts per second
+    //score variable should go up by 60ts per second
     while (GameOver == 0) {
       playerScore = playerScore + 1;
     }
     while (screenOne == 2) {
+      // 5 second timer from end screen to start menu
       nextGamestate = nextGamestate+1;
     }
+    //controls shift from end screen to start menu
     if (nextGamestate >= 300) {
       screenOne = 1;
       nextGamestate = 0;
@@ -337,3 +341,4 @@ void mousePressed() {
 void mouseReleased() {
   loop();
 }
+

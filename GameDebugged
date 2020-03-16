@@ -55,7 +55,7 @@ void draw() {
       screenOne = 1;
     }
     fill(255, 255, 255);
-    text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration", 300, 600 );
+    text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration", 300, 300 );
   }
 
   //gameplay strt screen
@@ -65,12 +65,12 @@ void draw() {
     println("GAME");
 
     fill(255);
-    text("GAME", 660, 455);
+    
 
     // x for player
-    x = 0 ;
+    x = 25 ;
     // y for player
-    y = 50;
+    y = 300;
 
     // stops the player score counter from looping.
     float ScoreRedoPrevention = 0;
@@ -139,7 +139,7 @@ void draw() {
     }
 
     //code to move meteors across screen and reset them when they hit the left edge
-    // random creates a random x value so meteors don't reset to same position
+    // random creates a random y value so meteors don't reset to same position
 
     A= A- 4.5;
     if (A < 0) {

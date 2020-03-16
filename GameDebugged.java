@@ -8,7 +8,7 @@ float x, y;
 
 void setup() {
   background(0, 0, 0);
-  size(1000, 900);
+  size(1000, 1000);
   noLoop();
 }
 
@@ -25,7 +25,6 @@ void draw() {
     ellipse(700, 450, 100, 100);
     // button for starting gameplay
     ellipse(300, 450, 100, 100);
-    textSize(25);
     textSize(85);
     text("Asteroid Dodge", 180, 200);
     textSize(25);
@@ -34,16 +33,19 @@ void draw() {
     text("credits", 660, 455);
     fill(0, 0, 0);
     //button for moving to gameplay start
+
     if ((dist(mouseX, mouseY, 300, 450)<30) && (mousePressed)) {
       screenOne = 2;
       println("GAME");
     }
     // button for moving to credits screen
+    
     if ((dist(mouseX, mouseY, 700, 450)<30) && (mousePressed)) {
       screenOne = 0;
     }
   }
-  // credits screen with back button
+  // credits screen with back button.
+  
   else if (screenOne == 0) {
     background(0, 0, 0);
     fill(0, 255, 0);
@@ -59,17 +61,18 @@ void draw() {
   }
 
   //gameplay strt screen
+  
   else if (screenOne == 2) {
     background(0, 0, 0);
 
     println("GAME");
 
     fill(255);
-    
 
-    // x for player
+
+    // x for player value assingment
     x = 25 ;
-    // y for player
+    // y for player value assingment
     y = 300;
 
     // stops the player score counter from looping.
@@ -83,15 +86,15 @@ void draw() {
     float playerScore = 0;
 
     // x’s for meteors
-    float A=  900;
-    float B=  1200;
-    float C=  800;
-    float D=  600;
-    float E=  850;
+    float A =  900;
+    float B =  1200;
+    float C =  800;
+    float D =  600;
+    float E =  850;
     float F = 700;
     float G = 900;
-    float H= 1000;
-    float I= 1400;
+    float H = 1000;
+    float I = 1400;
     float J = 1100;
     float K = 800;
     float L = 700;
@@ -141,9 +144,9 @@ void draw() {
     //code to move meteors across screen and reset them when they hit the left edge
     // random creates a random y value so meteors don't reset to same position
 
-    A= A- 4.5;
+    A = A - 4.5;
     if (A < 0) {
-      A= 1000;
+      A = 1000;
       for (int i = 50; i < 1000; i++) {
         AA  = random(50, 1000);
       }
@@ -155,7 +158,7 @@ void draw() {
         BB  = random(50, 1000);
       }
     }
-    C=C- 4.5;
+    C= C - 4.5;
     if (C< 0) {
       C = 1000;
       for (int i = 0; i < 1000; i++) {

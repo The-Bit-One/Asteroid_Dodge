@@ -57,7 +57,7 @@ void draw() {
       screenOne = 1;
     }
     fill(255, 255, 255);
-    text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration", 300, 300 );
+    text(" Game Design - Riley Herchert \n Start Screen GUI design - Riley Herchert \n Thank you to Atari's asteroids for inspiration \n also special thanks to @chrisr and @lightosk from the processing foroum", 300, 300 );
   }
 
   //gameplay strt screen
@@ -319,6 +319,7 @@ void draw() {
     }
   }
 }
+
 //player movement using arrow keys
 
 void keyPressed() {
@@ -330,8 +331,8 @@ void keyPressed() {
       }
     } else if (keyCode == DOWN) {
       y=y+17;
-      if (y > 900) {
-        y=900;
+      if (y > 1000) {
+        y=1000;
       }
     } else if (keyCode == RIGHT) {
       x=x+17 ;
@@ -341,7 +342,7 @@ void keyPressed() {
     } else if (keyCode == LEFT) {
       x=x-17;
       if (x < 0) {
-        x=0;
+        x=0;g
       }
     }
   }

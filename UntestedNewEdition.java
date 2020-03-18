@@ -237,7 +237,7 @@ if(empezar){
     stroke (255, 0, 0);
     fill(255, 0, 0);
     // player
-    ellipse(x, y, 50, 50);
+    ellipse(X, Y, 50, 50);
     //color setup
     fill(150, 75, 0);
     stroke (0);
@@ -315,7 +315,7 @@ if(empezar){
       GameOver = 1;
     }
 
-    if (dist(x, y, L, LL)<CR) {
+    if (dist(X, Y, L, LL)<CR) {
       print ("gameOver");
       GameOver = 1;
     }

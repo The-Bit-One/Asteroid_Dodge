@@ -327,24 +327,24 @@ if(empezar){
 void keyPressed() {
   if (key == CODED) {
     if (keyCode == UP) {
-      y=y-17 ;
-      if (y < 0) {
-        y=0;
+      Y=Y-17 ;
+      if (Y < 0) {
+        Y=0;
       }
     } else if (keyCode == DOWN) {
-      y=y+17;
-      if (y > 900) {
-        y=900;
+      Y=Y+17;
+      if (Y > 900) {
+        Y=900;
       }
     } else if (keyCode == RIGHT) {
-      x=x+17 ;
-      if (x > 1000) {
+      X=X+17 ;
+      if (X > 1000) {
         x=1000;
       }
     } else if (keyCode == LEFT) {
-      x=x-17;
-      if (x < 0) {
-        x=0;
+      X=X-17;
+      if (X < 0) {
+        X=0;
       }
     }
   }

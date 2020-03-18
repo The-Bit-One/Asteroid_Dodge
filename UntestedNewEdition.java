@@ -44,6 +44,9 @@ boolean empezar = true;
 // setting up player x and y
 float X, Y; 
 
+X = 500;
+Y = 50;
+
 void setup() {
   background(0, 0, 0);
   size(1000, 900);
@@ -108,9 +111,7 @@ void draw() {
 if(empezar){
     // x for player
     empezar = !empezar;
-    X = 0 ;
-    // y for player
-    Y = 50;}
+    
 
 
 
